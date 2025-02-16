@@ -39,19 +39,19 @@ import react from 'eslint-plugin-react'
 Here are the wireframes for the project:
 
 ### List Page
-![List Page Wireframe](./wireframes/listPage.png)
+![List Page Wireframe](/public/wireframes/listPage.png)
 
 ### Detail Page
-![Detail Page Wireframe](./wireframes/detailPage.png)
+![Detail Page Wireframe](/public/wireframes/detailPage.png)
 
 ### Create Page
-![Create Page Wireframe](./wireframes/createPage.png)
+![Create Page Wireframe](/public/wireframes/createPage.png)
 
 ### Edit Page
-![Edit Page Wireframe](./wireframes/editPage.png)
+![Edit Page Wireframe](/public/wireframes/editPage.png)
 
 ### Delete Action Modal Confirmation
-![Delete  Wireframe](./wireframes/deleteAction.png)
+![Delete  Wireframe](/public/wireframes/deleteAction.png)
 
 
 export default tseslint.config({
