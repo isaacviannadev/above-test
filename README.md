@@ -1,3 +1,23 @@
+## Wireframes
+
+Here are the wireframes for the project:
+
+### List Page
+![List Page Wireframe](/public/wireframes/listPage.png)
+
+### Detail Page
+![Detail Page Wireframe](/public/wireframes/detailPage.png)
+
+### Create Page
+![Create Page Wireframe](/public/wireframes/createPage.png)
+
+### Edit Page
+![Edit Page Wireframe](/public/wireframes/editPage.png)
+
+### Delete Action Modal Confirmation
+![Delete  Wireframe](/public/wireframes/deleteAction.png)
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -32,27 +52,6 @@ export default tseslint.config({
 ```js
 // eslint.config.js
 import react from 'eslint-plugin-react'
-
-
-## Wireframes
-
-Here are the wireframes for the project:
-
-### List Page
-![List Page Wireframe](/public/wireframes/listPage.png)
-
-### Detail Page
-![Detail Page Wireframe](/public/wireframes/detailPage.png)
-
-### Create Page
-![Create Page Wireframe](/public/wireframes/createPage.png)
-
-### Edit Page
-![Edit Page Wireframe](/public/wireframes/editPage.png)
-
-### Delete Action Modal Confirmation
-![Delete  Wireframe](/public/wireframes/deleteAction.png)
-
 
 export default tseslint.config({
   // Set the react version
