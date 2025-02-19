@@ -1,7 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
-import Container from "../layout";
-import Logo from "../logo";
+import { Button } from '@/components/ui/button';
+import { Clapperboard } from 'lucide-react';
+import Container from '../layout';
+import Logo from '../logo';
+import SearchBar from '../search-bar';
 
 interface NavbarProps {
   onNewEpisode?: () => void;
@@ -9,12 +10,13 @@ interface NavbarProps {
 
 const Navbar = ({ onNewEpisode }: NavbarProps) => {
   return (
-    <header className="h-16 border-b">
-      <Container className="h-full">
-        <div className="flex h-full items-center justify-between">
+    <header className='border-b h-16'>
+      <Container className='h-full'>
+        <div className='flex justify-between items-center gap-4 lg:gap-8 h-full'>
           <Logo isNav />
-          <Button onClick={onNewEpisode} size="sm">
-            <Plus className="mr-2 h-4 w-4" />
+          <SearchBar />
+          <Button onClick={onNewEpisode} size='sm'>
+            <Clapperboard className='mr-1 w-4 h-4' />
             New
           </Button>
         </div>
