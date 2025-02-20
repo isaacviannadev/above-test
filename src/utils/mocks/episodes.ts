@@ -2,7 +2,7 @@ import { EpisodeType } from '@/types';
 
 export const EPISODES_MOCK: EpisodeType[] = [
   {
-    id: 1,
+    id: '1',
     series: 'Breaking Bad',
     title: 'Pilot',
     description:
@@ -13,7 +13,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt0959621',
   },
   {
-    id: 2,
+    id: '2',
     series: 'Breaking Bad',
     title: "Cat's in the Bag...",
     description:
@@ -24,7 +24,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt1054724',
   },
   {
-    id: 3,
+    id: '3',
     series: 'Stranger Things',
     title: 'Chapter One: The Vanishing of Will Byers',
     description:
@@ -35,7 +35,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt4593118',
   },
   {
-    id: 4,
+    id: '4',
     series: 'The Crown',
     title: 'Wolferton Splash',
     description:
@@ -46,7 +46,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt4786824',
   },
   {
-    id: 5,
+    id: '5',
     series: 'Game of Thrones',
     title: 'Winter Is Coming',
     description: 'The Stark family welcomes the royal court to Winterfell.',
@@ -56,7 +56,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt1480055',
   },
   {
-    id: 6,
+    id: '6',
     series: 'The Mandalorian',
     title: 'Chapter 1: The Mandalorian',
     description:
@@ -67,7 +67,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt9095424',
   },
   {
-    id: 7,
+    id: '7',
     series: 'Dark',
     title: 'Secrets',
     description:
@@ -78,7 +78,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt5753856',
   },
   {
-    id: 8,
+    id: '8',
     series: 'Chernobyl',
     title: '1:23:45',
     description:
@@ -89,7 +89,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt7366338',
   },
   {
-    id: 9,
+    id: '9',
     series: 'The Witcher',
     title: "The End's Beginning",
     description:
@@ -100,7 +100,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt8069590',
   },
   {
-    id: 10,
+    id: '10',
     series: 'Black Mirror',
     title: 'The National Anthem',
     description:
@@ -111,7 +111,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt2089049',
   },
   {
-    id: 11,
+    id: '11',
     series: 'The Last of Us',
     title: "When You're Lost in the Darkness",
     description:
@@ -122,7 +122,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt14500888',
   },
   {
-    id: 12,
+    id: '12',
     series: 'Succession',
     title: 'Celebration',
     description:
@@ -133,7 +133,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt7660850',
   },
   {
-    id: 13,
+    id: '13',
     series: 'Better Call Saul',
     title: 'Uno',
     description:
@@ -144,7 +144,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt3464768',
   },
   {
-    id: 14,
+    id: '14',
     series: 'The Bear',
     title: 'System',
     description:
@@ -155,7 +155,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt14452776',
   },
   {
-    id: 15,
+    id: '15',
     series: 'Ted Lasso',
     title: 'Pilot',
     description:
@@ -166,7 +166,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt10986410',
   },
   {
-    id: 16,
+    id: '16',
     series: 'House of the Dragon',
     title: 'The Heirs of the Dragon',
     description:
@@ -177,7 +177,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt11198330',
   },
   {
-    id: 17,
+    id: '17',
     series: 'The Office',
     title: 'Pilot',
     description:
@@ -188,7 +188,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt0664512',
   },
   {
-    id: 18,
+    id: '18',
     series: 'Severance',
     title: 'Good News About Hell',
     description:
@@ -199,7 +199,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt11280740',
   },
   {
-    id: 19,
+    id: '19',
     series: 'Wednesday',
     title: "Wednesday's Child Is Full of Woe",
     description:
@@ -210,7 +210,7 @@ export const EPISODES_MOCK: EpisodeType[] = [
     imdbId: 'tt13443470',
   },
   {
-    id: 20,
+    id: '20',
     series: 'The Boys',
     title: 'The Name of the Game',
     description:
