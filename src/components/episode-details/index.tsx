@@ -3,22 +3,24 @@ import { useEpisodeMutations } from '@/hooks/use-episodes-mutations';
 import { EpisodeType } from '@/types';
 import { useQuery } from '@apollo/client';
 import { ArrowLeft } from 'lucide-react';
-import { NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 import AlertDelete from '../alert-delete';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
+import { LoadingFallback } from './loading-fallback';
 
 interface EpisodeDetailsProps {
   episodeId: string;
 }
 
 const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
-  const { data, loading, error } = useQuery<{ getEpisodeById: EpisodeType }>(
-    GET_EPISODE_BY_ID,
-    {
-      variables: { episodeId },
-    }
-  );
+  const router = useNavigate();
+
+  const { data, loading, error, refetch } = useQuery<{
+    getEpisodeById: EpisodeType;
+  }>(GET_EPISODE_BY_ID, {
+    variables: { episodeId },
+  });
 
   const { deleteEpisode } = useEpisodeMutations();
 
@@ -36,6 +38,8 @@ const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
   const handleDelete = async () => {
     try {
       await deleteEpisode(episode?.id ?? '');
+      refetch();
+      router('/');
     } catch (error) {
       console.error('Failed to delete episode:', error);
     }
@@ -50,7 +54,7 @@ const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
   }
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingFallback />;
   }
 
   return (
@@ -85,9 +89,7 @@ const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
               {releaseDate}
             </Badge>
           </div>
-          <p className='text-zinc-600 line-clamp-[11]'>
-            {episode?.description}
-          </p>
+          <p className='text-zinc-600 line-clamp-[9]'>{episode?.description}</p>
         </div>
 
         <div className='flex flex-col justify-end gap-2 min-w-3xs h-full'>
