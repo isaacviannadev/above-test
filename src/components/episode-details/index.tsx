@@ -1,4 +1,6 @@
-import { EPISODES_MOCK } from '@/utils/mocks/episodes';
+import { GET_EPISODE_BY_ID } from '@/graphql/queries';
+import { EpisodeType } from '@/types';
+import { useQuery } from '@apollo/client';
 import { ArrowLeft } from 'lucide-react';
 import { NavLink } from 'react-router';
 import AlertDelete from '../alert-delete';
@@ -9,7 +11,26 @@ interface EpisodeDetailsProps {
 }
 
 const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
-  const episode = EPISODES_MOCK.find((episode) => episode.id === +episodeId);
+  const { data, loading, error } = useQuery<{ getEpisodeById: EpisodeType }>(
+    GET_EPISODE_BY_ID,
+    {
+      variables: { episodeId },
+    }
+  );
+
+  const episode = data?.getEpisodeById;
+
+  if (error) {
+    return (
+      <div className='bg-red-50 p-4 rounded-lg text-red-600'>
+        Error loading episode: {error.message}
+      </div>
+    );
+  }
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className='group relative lg:gap-8 lg:grid lg:grid-cols-3'>

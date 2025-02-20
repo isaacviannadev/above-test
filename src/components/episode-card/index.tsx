@@ -9,7 +9,7 @@ const EpisodeCard = ({ episode }: EpisodeCardProps) => {
   return (
     <div className='group relative rounded-xl aspect-square overflow-hidden'>
       <NavLink
-        to={`/details/${episode.id}`}
+        to={`/episode/${episode.id}`}
         className='z-10 absolute inset-0'
       />
       <img
