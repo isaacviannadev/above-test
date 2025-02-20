@@ -18,8 +18,6 @@ const SearchBar = () => {
     },
   });
 
-  const { handleSubmit } = form;
-
   const onSubmit = (data: SearchFormData) => {
     console.log(data);
   };
@@ -27,7 +25,7 @@ const SearchBar = () => {
   return (
     <Form {...form}>
       <form
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={form.handleSubmit(onSubmit)}
         className='flex items-center w-full'
       >
         <FormField

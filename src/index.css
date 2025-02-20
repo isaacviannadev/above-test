@@ -96,5 +96,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply font-sans antialiased;
+  }
+  button, a {
+    @apply cursor-pointer;
   }
 }
