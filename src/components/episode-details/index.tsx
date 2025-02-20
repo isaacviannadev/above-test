@@ -24,7 +24,9 @@ const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
 
       <div className='flex sm:flex-row flex-col lg:flex-col gap-6'>
         <div>
-          <h1 className='mb-2 font-semibold text-2xl'>{episode?.title}</h1>
+          <h1 className='mb-2 font-semibold text-2xl text-balance'>
+            {episode?.title}
+          </h1>
           <div className='bg-zinc-200 mb-4 rounded w-16 h-4' />
           <p className='text-zinc-600 line-clamp-[11]'>
             {episode?.description}
