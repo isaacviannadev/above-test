@@ -10,7 +10,7 @@ const EpisodeSuggestions = ({ refEpisodeId }: EpisodeSuggestionsProps) => {
   const { episodes, refetch } = useEpisodes();
 
   const episodesSuggested = episodes.filter(
-    (episode) => episode.id !== +refEpisodeId
+    (episode) => episode.id !== refEpisodeId
   );
 
   useEffect(() => {

@@ -90,6 +90,18 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+@theme {
+  --animate-flicker: flicker 0.05s infinite;
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

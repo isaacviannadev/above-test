@@ -1,5 +1,5 @@
 export type EpisodeType = {
-  id: number;
+  id: string;
   series: string;
   title: string;
   description: string;
@@ -8,3 +8,6 @@ export type EpisodeType = {
   releaseDate: string;
   imdbId: string;
 };
+
+export type EpisodeInput = EpisodeType;
+export type UpdateEpisodeInput = EpisodeType;
