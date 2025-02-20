@@ -41,6 +41,7 @@ const ManagementPage = () => {
     getEpisodeById: EpisodeType;
   }>(GET_EPISODE_BY_ID, {
     variables: { episodeId },
+    skip: !isEditing,
   });
 
   const { createEpisode, updateEpisode } = useEpisodeMutations();
@@ -65,7 +66,7 @@ const ManagementPage = () => {
       description: episode.description,
       seasonNumber: episode.seasonNumber,
       episodeNumber: episode.episodeNumber,
-      releaseDate: new Date(episode.releaseDate).toISOString().split('T')[0],
+      releaseDate: episode.releaseDate,
       imdbId: episode.imdbId,
     },
   });
