@@ -1,8 +1,10 @@
 export type EpisodeType = {
   id: number;
+  series: string;
   title: string;
   description: string;
-  air_date: string;
-  episode: string;
-  characters: string[];
+  seasonNumber: number;
+  episodeNumber: number;
+  releaseDate: string;
+  imdbId: string;
 };
