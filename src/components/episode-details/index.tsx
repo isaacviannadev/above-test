@@ -1,4 +1,5 @@
 import { GET_EPISODE_BY_ID } from '@/graphql/queries';
+import { useEpisodeMutations } from '@/hooks/use-episodes-mutations';
 import { EpisodeType } from '@/types';
 import { useQuery } from '@apollo/client';
 import { ArrowLeft } from 'lucide-react';
@@ -18,7 +19,17 @@ const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
     }
   );
 
+  const { deleteEpisode } = useEpisodeMutations();
+
   const episode = data?.getEpisodeById;
+
+  const handleDelete = async () => {
+    try {
+      await deleteEpisode(episode?.id ?? '');
+    } catch (error) {
+      console.error('Failed to delete episode:', error);
+    }
+  };
 
   if (error) {
     return (
@@ -67,7 +78,7 @@ const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
               Edit
             </NavLink>
           </Button>
-          <AlertDelete onDelete={() => console.log('Delete')} />
+          <AlertDelete onDelete={handleDelete} />
         </div>
       </div>
     </div>
