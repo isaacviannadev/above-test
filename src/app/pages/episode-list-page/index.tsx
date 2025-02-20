@@ -15,7 +15,7 @@ const List = () => {
   });
 
   if (error) {
-    return <div className='text-red-600'>Error: {error.message}</div>;
+    throw error;
   }
 
   if (isLoading) {

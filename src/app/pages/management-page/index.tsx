@@ -31,9 +31,7 @@ const ManagementPage = () => {
 
   const episodeId = params.id ?? '';
 
-  const episode = EPISODES_MOCK.find(
-    (episode) => episode.id === +episodeId
-  ) ?? {
+  const episode = EPISODES_MOCK.find((episode) => episode.id === episodeId) ?? {
     title: '',
     description: '',
   };
