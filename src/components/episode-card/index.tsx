@@ -7,8 +7,6 @@ interface EpisodeCardProps {
 }
 
 const EpisodeCard = ({ episode }: EpisodeCardProps) => {
-  console.log('EpisodeCard', episode);
-
   const releaseDate = new Date(episode.releaseDate).toLocaleString('en', {
     month: 'short',
     day: '2-digit',

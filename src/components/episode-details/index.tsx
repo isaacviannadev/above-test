@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import { ArrowLeft } from 'lucide-react';
 import { NavLink } from 'react-router';
 import AlertDelete from '../alert-delete';
+import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 
 interface EpisodeDetailsProps {
@@ -21,7 +22,16 @@ const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
 
   const { deleteEpisode } = useEpisodeMutations();
 
-  const episode = data?.getEpisodeById;
+  const episode = data?.getEpisodeById ?? null;
+
+  const releaseDate = new Date(episode?.releaseDate ?? '').toLocaleString(
+    'en',
+    {
+      month: 'short',
+      day: '2-digit',
+      year: 'numeric',
+    }
+  );
 
   const handleDelete = async () => {
     try {
@@ -66,7 +76,15 @@ const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
           <h1 className='mb-2 font-semibold text-2xl text-balance'>
             {episode?.title}
           </h1>
-          <div className='bg-zinc-200 mb-4 rounded w-16 h-4' />
+          <div className='flex gap-2 mb-4'>
+            <Badge className='bg-slate-700 text-white text-xs text-balance'>
+              <span>{episode?.series} </span>
+              <span> - Ep. {episode?.episodeNumber}</span>
+            </Badge>
+            <Badge className='bg-zinc-200 rounded text-slate-700'>
+              {releaseDate}
+            </Badge>
+          </div>
           <p className='text-zinc-600 line-clamp-[11]'>
             {episode?.description}
           </p>
