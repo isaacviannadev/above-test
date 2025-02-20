@@ -37,11 +37,7 @@ const EpisodeDetails = ({ episodeId }: EpisodeDetailsProps) => {
               Edit
             </NavLink>
           </Button>
-          <AlertDelete onDelete={() => console.log('Delete')}>
-            <Button variant='destructive' className='w-full'>
-              Delete
-            </Button>
-          </AlertDelete>
+          <AlertDelete onDelete={() => console.log('Delete')} />
         </div>
       </div>
     </div>
